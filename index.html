@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Happy Mother's Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+
+  <main class="page">
+    <header class="hero">
+      <h1>Happy Mother's Day</h1>
+      <p class="subtitle">Welcome to your gift coupon page 🌸</p>
+    </header>
+
+    <section class="panel login-panel">
+      <h2>Your Gift Profile</h2>
+      <p>Enter your name or a personal code to load your saved course progress on this browser.</p>
+      <form id="profile-form" class="profile-form">
+        <label for="profile-key">Name or Code</label>
+        <input id="profile-key" type="text" placeholder="ex: mom-carolyn" required />
+        <button type="submit">Load Profile</button>
+      </form>
+      <p id="active-profile" class="active-profile">No profile loaded yet.</p>
+    </section>
+
+    <section class="panel instructions">
+      <h2>How To Use This Page</h2>
+      <ol>
+        <li>Pick your profile above so your redeemed courses are saved.</li>
+        <li>Browse each course card below for instructor, notice timing, and details.</li>
+        <li>When you are ready, text the instructor with the course title to schedule your time.</li>
+        <li>You may bring a <strong>plus 1</strong> to any course.</li>
+        <li>Only click <strong>Redeem</strong> after you have actually taken the course. Each course can be redeemed once.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Instructors</h2>
+      <div class="instructor-grid">
+        <article class="instructor-card">
+          <img class="instructor-photo" src="hannah.jpg" alt="Hannah portrait in a light blue cardigan" />
+          <h3>Hannah</h3>
+          <p>kinda confused with life atm, but secure child of God and of Carolyn Park. Grateful for her mother because her mother was the backbone of the family, literally carried everyone with her prayers and love, and is girl boss fit girl grad student energy. Check out the slang workshop to see what this means :)</p>
+        </article>
+
+        <article class="instructor-card">
+          <img class="instructor-photo" src="amy.png" alt="Amy portrait in a dark blue shirt" />
+          <h3>Amy</h3>
+          <p>Wants to wish her mother Happy Mother's Day! She is super greatful for all of the support and love that her mother has given to her from dealing with her 찡찡 to helping her with moving to praying for her for her entire life. She would not know where she would be without her mother's guidance and help. Love you lots!!!</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Available Courses</h2>
+      <div id="available-courses" class="course-grid"></div>
+    </section>
+
+    <section class="panel used-panel">
+      <h2>Used Courses</h2>
+      <p>Once redeemed, a course moves here and cannot be redeemed again for this profile.</p>
+      <div id="used-courses" class="course-grid"></div>
+    </section>
+  </main>
+
+  <template id="course-template">
+    <article class="course-card">
+      <div class="course-head">
+        <h3 class="course-title"></h3>
+        <span class="course-badge">Gift Course</span>
+      </div>
+      <p class="course-meta"><strong>Instructor:</strong> <span class="course-instructor"></span></p>
+      <p class="course-meta"><strong>Prior Notice:</strong> <span class="course-notice"></span></p>
+      <p class="course-blurb"></p>
+      <div class="course-actions">
+        <button class="toggle-details" type="button">View Instructions</button>
+      </div>
+      <div class="course-details hidden">
+        <p>Please text the instructor with the course title to schedule the course time.</p>
+        <p>You may bring a plus 1 to this course.</p>
+        <p>Only click redeem once you have taken the course.</p>
+        <button class="redeem-btn" type="button">Redeem</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
